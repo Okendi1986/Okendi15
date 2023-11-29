@@ -1,3 +1,4 @@
+import 'package:communi/categorie.dart';
 import 'package:communi/header.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(appBarTheme: AppBarTheme(color: Colors.teal,centerTitle: true),
       bottomAppBarColor: Colors.teal,
       floatingActionButtonTheme: FloatingActionButtonThemeData(backgroundColor: Colors.orange),
+      cardColor: Colors.teal,
       ),
       home: Hamberger(),
       debugShowCheckedModeBanner: false,
@@ -40,12 +42,7 @@ class _HambergerState extends State<Hamberger> {
               icon: Icon(Icons.menu)),
           ),
           header(),
-          SliverList(
-            delegate: SliverChildListDelegate(
-              [
-                Text("Hamberger",style: TextStyle(fontSize: 300),),
-
-          ],),)
+          categorie(),
           ],
           ),
           extendBody: true,
